@@ -274,9 +274,9 @@ nginx_install(){
             --with-http_mp4_module                              \
             --with-http_secure_link_module                      \
             --with-http_dav_module                              \
+            --add-module=/root/nginx-dav-ext-module             \
             --with-http_v2_module                               \
             --with-openssl=../openssl-"$openssl_version"
-            --add-module=/root/nginx-dav-ext-module
     judge "编译检查"
     make && make install
     judge "Nginx 编译安装"
